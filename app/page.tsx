@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function fmt(n: number | string) {
   const num = Number(n || 0);
@@ -17,6 +17,10 @@ export default function RegistrarVenta() {
   const [loading, setLoading] = useState(false);
   const [resp, setResp] = useState<any>(null);
   const [err, setErr] = useState<string | null>(null);
+
+  useEffect(() => {
+    setPhone('');
+  }, []);me quedaria
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();

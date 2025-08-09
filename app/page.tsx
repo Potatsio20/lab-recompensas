@@ -20,7 +20,7 @@ export default function RegistrarVenta() {
 
   useEffect(() => {
     setPhone('');
-  }, []);me quedaria
+  }, []);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
